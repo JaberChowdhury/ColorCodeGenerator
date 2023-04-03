@@ -1,0 +1,62 @@
+.left {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 83;
+}
+.left::before {
+  content: " ";
+  position: absolute;
+  width: 40px;
+  padding: 2px;
+  background: black;
+  right: -35px;
+  z-index: 2;
+  border-radius: 10px;
+}
+
+.right {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 83;
+}
+.right::before {
+  content: " ";
+  position: absolute;
+  width: 40px;
+  padding: 2px;
+  background: black;
+  left: -35px;
+  z-index: 2;
+  border-radius: 10px;
+}
+
+.middleArrow {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.middleArrow::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  transform: rotatez(45deg);
+  left: 0px;
+  z-index: 234;
+}
+.middleArrow::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  transform: rotatez(45deg);
+  right: 0px;
+  z-index: 234;
+}

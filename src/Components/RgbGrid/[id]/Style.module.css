@@ -1,0 +1,35 @@
+.left {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 83;
+}
+.left::before {
+  content: " ";
+  position: absolute;
+  width: 40px;
+  padding: 2px;
+  background: black;
+  right: -35px;
+  z-index: 2;
+  border-radius: 10px;
+}
+
+.right {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 83;
+}
+.right::before {
+  content: " ";
+  position: absolute;
+  width: 40px;
+  padding: 2px;
+  background: black;
+  left: -35px;
+  z-index: 2;
+  border-radius: 10px;
+}
