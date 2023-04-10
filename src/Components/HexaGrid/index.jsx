@@ -6,33 +6,44 @@ import Head from "../SmallComponent/Head.jsx";
 function HexaGrid() {
   const [hexaCodes, setHexaCodes] = useState([]);
   const [opoHexaCodes, setOpoHexaCodes] = useState([]);
-  const generate = (codeArray) => {
-    let HexadecimalCode = "#";
-    for (let i = 0; i < 6; i++) {
-      HexadecimalCode += codeArray[Math.floor(Math.random() * 16)];
+
+  const generate = () => {
+    let code = "#";
+    let OpositeCode = "#";
+    for (var i = 0; i < 6; i++) {
+      let randomNum = Math.floor(Math.random() * 16);
+      code += [..."0123456789abcdef"][randomNum];
+      OpositeCode += [..."fedcba9876543210"][randomNum];
     }
-    return HexadecimalCode;
+    return { code, OpositeCode };
   };
+
   const handleClick = () => {
     setHexaCodes([]);
     setOpoHexaCodes([]);
-    const one = [];
-    const two = [];
-    for (let i = 0; i < 62; i++) {
-      one.push(generate([..."0123456789abcdef"]));
-      two.push(generate([..."fedcba9876543210"]));
+    let one = [];
+    let two = [];
+    for (var i = 0; i < 60; i++) {
+      let colorObj = generate();
+      one.push(colorObj.code);
+      two.push(colorObj.OpositeCode);
     }
-    setHexaCodes([...one]);
 
+    setHexaCodes([...one]);
     setOpoHexaCodes([...two]);
   };
+
   // eslint-disable-next-line
+
   useEffect(() => {
     handleClick();
+    return () => handleClick();
   }, []);
+
   return (
     <div className="w-full h-screen flex justify-center bg-slate-900  items-center flex-wrap relative">
       <Head title="Hexadecimal Color" />
+
       <Button id="Random" handle={handleClick} />
 
       <div className="w-full h-screen flex text-slate-200 flex-wrap gap-2 mt-28 justify-center items-center relative">

@@ -54,9 +54,13 @@ function RgbGrid() {
   };
 
   // eslint-disable-next-line
+
   useEffect(() => {
     handleClick();
+
+    return () => handleClick();
   }, []);
+
   return (
     <>
       <div className="w-full h-full flex justify-center bg-slate-900  items-center flex-wrap relative">

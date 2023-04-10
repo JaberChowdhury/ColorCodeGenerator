@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import classes from "./Style.module.css";
 import Book from "../../SmallComponent/Book";
+import SlideShow from "../../SmallComponent/SlideShow";
 
 export default function Pages() {
   const [sure, setSure] = useState("Copy");
@@ -53,6 +54,9 @@ export default function Pages() {
       <h1 className="text-slate-100 text-3xl m-2 bg-slate-700 rounded px-2 text-center">
         Hexadecimal Code Analysis
       </h1>
+
+      <SlideShow color1={color1} color2={color2} />
+
       <div className="w-[400px] px-2 flex justify-center items-center flex-col rounded bg-slate-600">
         <div className="p-2 mt-2 w-full bg-slate-500 rounded flex gap-2 justify-between items-center relative">
           <div
