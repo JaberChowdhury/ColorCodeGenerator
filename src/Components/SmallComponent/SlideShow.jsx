@@ -1,5 +1,3 @@
-
-
 export default function SlideShow({ color1, color2 }) {
   return (
     <div className="w-full h-[250px] overflow-hidden m-2 flex justify-center items-center relative">
@@ -9,8 +7,7 @@ export default function SlideShow({ color1, color2 }) {
       >
         {color1}
       </div>
-      
-     
+
       <div
         style={{ backgroundColor: color2, color: color1 }}
         className="w-full h-full font-bold flex justify-center items-center relative"

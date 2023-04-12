@@ -36,9 +36,9 @@ function HexaGrid() {
   // eslint-disable-next-line
 
   useEffect(() => {
-    handleClick();
-    return () => handleClick();
-  }, []);
+    handleClick()
+    return ()=> handleClick()
+  },[]);
 
   return (
     <div className="w-full h-screen flex justify-center bg-slate-900  items-center flex-wrap relative">
