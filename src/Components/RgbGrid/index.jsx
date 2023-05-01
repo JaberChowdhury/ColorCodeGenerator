@@ -58,7 +58,7 @@ function RgbGrid() {
   useEffect(() => {
     handleClick();
     return () => handleClick();
-  },[]);
+  }, []);
 
   return (
     <>
