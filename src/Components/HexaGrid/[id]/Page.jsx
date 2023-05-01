@@ -165,7 +165,6 @@ export default function Pages() {
         })}
       </div>
 
-
       <div className="border border-slate-900 w-[400px] rounded flex justify-center items-center flex-col relative p-2 m-2 bg-slate-300">
         {opacity.reverse().map((value) => {
           return (
