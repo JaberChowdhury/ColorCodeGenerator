@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import classes from "./Style.module.css";
 import Book from "../../SmallComponent/Book";
 import SlideShow from "../../SmallComponent/SlideShow";
+import Block from "../../SmallComponent/Block";
 
 export default function Pages() {
   const [sure, setSure] = useState("Copy");
@@ -48,7 +49,45 @@ export default function Pages() {
       setSure("Copy");
     }, 1000);
   };
-
+  const generateVariant = (colorCode, pos) => {
+    let final = [];
+    const HexadecimalCode = [..."0123456789abcdef"];
+    const hl = HexadecimalCode.length;
+    const position = parseFloat(pos);
+    if (position === 1) {
+      const code = colorCode.slice(2);
+      for (let i = 0; i < hl; i++) {
+        final.push(`#${HexadecimalCode[i]}${code}`);
+      }
+    } else if (position === 2) {
+      const code = [colorCode.slice(1, 2), colorCode.slice(3)];
+      for (let i = 0; i < hl; i++) {
+        final.push(`#${code[0]}${HexadecimalCode[i]}${code[1]}`);
+      }
+    } else if (position === 3) {
+      const code = [colorCode.slice(1, 3), colorCode.slice(4)];
+      for (let i = 0; i < hl; i++) {
+        final.push(`#${code[0]}${HexadecimalCode[i]}${code[1]}`);
+      }
+    } else if (position === 4) {
+      const code = [colorCode.slice(1, 4), colorCode.slice(5)];
+      for (let i = 0; i < hl; i++) {
+        final.push(`#${code[0]}${HexadecimalCode[i]}${code[1]}`);
+      }
+    } else if (position === 5) {
+      const code = [colorCode.slice(1, 5), colorCode.slice(6)];
+      for (let i = 0; i < hl; i++) {
+        final.push(`#${code[0]}${HexadecimalCode[i]}${code[1]}`);
+      }
+    } else if (position === 6) {
+      const code = [colorCode.slice(1, 6), colorCode.slice(7)];
+      for (let i = 0; i < hl; i++) {
+        final.push(`#${code[0]}${HexadecimalCode[i]}${code[1]}`);
+      }
+    }
+    return final;
+  };
+  const variant = [..."123456"];
   return (
     <div className="flex justify-center items-center relative flex-col">
       <h1 className="text-slate-100 text-3xl m-2 bg-slate-700 rounded px-2 text-center">
@@ -113,6 +152,20 @@ export default function Pages() {
         </button>
       </div>
 
+      <div className="w-full flex justify-around rounded bg-slate-300 items-center flex-wrap relative">
+        {variant.map((value) => {
+          const c1 = generateVariant(color1, value);
+          const c2 = generateVariant(color2, value);
+          return (
+            <div className="w-[400px] shadow-md  p-2 flex justify-between items-center relative">
+              <Block text={c2} colors={c1} />
+              <Block text={c1} colors={c2} />
+            </div>
+          );
+        })}
+      </div>
+
+
       <div className="border border-slate-900 w-[400px] rounded flex justify-center items-center flex-col relative p-2 m-2 bg-slate-300">
         {opacity.reverse().map((value) => {
           return (
@@ -134,7 +187,6 @@ export default function Pages() {
           );
         })}
       </div>
-
       <div className="grid grid-cols-2 justify-between items-center p-2 m-2 gap-2">
         <div
           className="w-[150px] h-[150px] rounded-full"

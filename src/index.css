@@ -19,7 +19,7 @@
   font-family: OperatorMono;
   /*
   */
-  transition: 0s ease-in;
+  transition: 0.2s ease-in;
 }
 
 body {
@@ -34,4 +34,14 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.SmallBlock {
+  opacity: 1;
+}
+.Block:hover .SmallBlock {
+  opacity: 0.25;
+}
+.Block .SmallBlock:hover {
+  opacity: 1;
 }
