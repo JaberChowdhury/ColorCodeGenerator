@@ -88,6 +88,10 @@ export default function Pages() {
     return final;
   };
   const variant = [..."123456"];
+  
+  
+  
+
   return (
     <div className="flex justify-center items-center relative flex-col">
       <h1 className="text-slate-100 text-3xl m-2 bg-slate-700 rounded px-2 text-center">

@@ -2,10 +2,20 @@ import { Link } from "react-router-dom";
 
 export default function Box({ color1, color2 }) {
   const str = color1.slice(1) + color2.slice(1);
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   return (
     <Link
       to={`./${str}`}
-      className="box w-[200px] px-2 flex justify-center items-center flex-col rounded bg-slate-600"
+      className=" box w-[200px] px-2 flex justify-center items-center flex-col rounded bg-slate-600"
     >
       <div className="p-2 mt-2 w-full bg-slate-500 rounded flex gap-2 justify-between items-center relative">
         <div

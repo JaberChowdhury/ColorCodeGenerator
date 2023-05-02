@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+.hidden {
+  filter: blur(10px);
+  transform: translateX(-400px);
+  opacity: 0;
+}
+.show {
+  filter: blur(0px);
+  transform: translateX(0px);
+  opacity: 1;
+}
+
 @font-face {
   /*
   src: url("./Operator/OperatorMono-Bold.otf");
