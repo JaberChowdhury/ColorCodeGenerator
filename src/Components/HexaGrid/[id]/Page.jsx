@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import classes from "./Style.module.css";
 import Book from "../../SmallComponent/Book";
@@ -88,9 +88,10 @@ export default function Pages() {
     return final;
   };
   const variant = [..."123456"];
-  
-  
-  
+
+  useEffect(() => {
+    document.title = `${color1} || ${color2}`;
+  }, []);
 
   return (
     <div className="flex justify-center items-center relative flex-col">

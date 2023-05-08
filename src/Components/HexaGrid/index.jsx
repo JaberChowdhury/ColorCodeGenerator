@@ -41,12 +41,10 @@ function HexaGrid() {
   }, []);
 
   return (
-    <div className="w-full h-screen flex justify-center bg-slate-900  items-center flex-wrap relative">
+    <div className="w-full flex justify-center bg-slate-900 items-center flex-wrap relative">
       <Head title="Hexadecimal Color" />
-
       <Button id="Random" handle={handleClick} />
-
-      <div className="w-full h-screen flex text-slate-200 flex-wrap gap-2 mt-28 justify-center items-center relative">
+      <div className="w-full min-h-screen flex text-slate-200 flex-wrap gap-2 mt-28 justify-center items-center relative">
         {hexaCodes.map((value, index) => {
           return <Box color1={hexaCodes[index]} color2={opoHexaCodes[index]} />;
         })}

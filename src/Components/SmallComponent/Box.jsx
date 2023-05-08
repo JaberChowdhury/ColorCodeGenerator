@@ -2,16 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Box({ color1, color2 }) {
   const str = color1.slice(1) + color2.slice(1);
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
   return (
     <Link
       to={`./${str}`}
