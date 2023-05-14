@@ -1,0 +1,29 @@
+To convert a hexadecimal code to decimal, you can follow these steps:
+
+1. Write down the hexadecimal number.
+2. Write down the decimal equivalent of each hexadecimal digit (0-9, A-F).
+   - 0 = 0
+   - 1 = 1
+   - 2 = 2
+   - 3 = 3
+   - 4 = 4
+   - 5 = 5
+   - 6 = 6
+   - 7 = 7
+   - 8 = 8
+   - 9 = 9
+   - A = 10
+   - B = 11
+   - C = 12
+   - D = 13
+   - E = 14
+   - F = 15
+3. Multiply each decimal equivalent by its corresponding power of 16, based on its position in the hexadecimal number.
+   - For example, in the hexadecimal number "3A7":
+     - The rightmost digit is 7, which is equivalent to 7 x 16^0 = 7 x 1 = 7 in decimal.
+     - The middle digit is A, which is equivalent to 10 x 16^1 = 160 in decimal.
+     - The leftmost digit is 3, which is equivalent to 3 x 16^2 = 768 in decimal.
+4. Add the results of step 3 together to get the decimal equivalent of the hexadecimal number.
+   - For the hexadecimal number "3A7", the decimal equivalent is 7 + 160 + 768 = 935.
+
+Therefore, the decimal equivalent of a hexadecimal code depends on its digits and their positions.

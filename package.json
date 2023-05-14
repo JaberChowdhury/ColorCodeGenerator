@@ -28,17 +28,5 @@
     "prettier": "^2.8.8",
     "tailwindcss": "^3.3.2",
     "vite": "^4.3.2"
-  },
-  "description": "color code generator",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Blacklegion69/ColorCodeGenerator.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Blacklegion69/ColorCodeGenerator/issues"
-  },
-  "homepage": "https://github.com/Blacklegion69/ColorCodeGenerator#readme"
+  }
 }
