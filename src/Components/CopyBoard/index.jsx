@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { HexaToRgb } from "../../Hooks";
 
 export default function CopyBoard({
   bg: color1 = "#ffffff",
@@ -27,7 +28,7 @@ export default function CopyBoard({
 
   return (
     <div className="w-[400px] px-2 flex justify-center items-center flex-col rounded bg-slate-600">
-      <div className="p-2 mt-2 w-full bg-slate-500 rounded flex gap-2 justify-between items-center relative">
+      <div className="p-2 mt-2 w-full bg-slate-500 rounded grid grid-cols-2 gap-2 justify-between  items-center relative">
         <div
           style={{ backgroundColor: color1, color: color2 }}
           className="w-full shadow-md p-2 rounded text-center"
@@ -39,6 +40,19 @@ export default function CopyBoard({
           className="w-full shadow-md p-2 rounded text-center"
         >
           {color2}
+        </div>
+
+        <div
+          style={{ backgroundColor: color1, color: color2 }}
+          className="w-full shadow-md p-2 rounded text-center"
+        >
+          {HexaToRgb(color1)}
+        </div>
+        <div
+          style={{ backgroundColor: color2, color: color1 }}
+          className="w-full shadow-md p-2 rounded text-center"
+        >
+          {HexaToRgb(color2)}
         </div>
       </div>
 

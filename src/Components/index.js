@@ -9,3 +9,4 @@ export { default as Input } from "./Input";
 export { default as CopyBoard } from "./CopyBoard";
 export { default as MakeVariant } from "./MakeVariant";
 export { default as ErrorBoundary } from "./ErrorBoundary";
+export { default as Svg } from "./Svg";

@@ -27,7 +27,10 @@ export default function App() {
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Colors" element={<Colors data={colorCodes} />} />
+        <Route
+          path="/Colors"
+          element={<Colors generateColors={generateColors} data={colorCodes} />}
+        />
         <Route path="/Colors/:id" element={<ColorInfo />} />
         <Route
           path="/HexadecimalConverter"
