@@ -23,6 +23,7 @@ export default function Home() {
         </HomeLink>
         */}
       </div>
+
       <HomeSlider value="Hexadecimal" />
       <HomeSlider value="Rgb" />
     </div>

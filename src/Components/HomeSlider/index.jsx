@@ -28,18 +28,36 @@ export default function HomeSlider({ value = "Hexadecimal" }) {
         {value} Example
       </div>
 
-      <div className="w-full grid justify-between grid-row-2 grid-cols-3 bg-slate-500 items-center p-2 shadow-md overflow-y-scroll">
+      <marquee
+        direction="left"
+        className="w-full bg-slate-500 p-2 shadow-md overflow-y-scroll"
+      >
         {code?.map((data) => {
           return (
             <Color
               key={crypto.randomUUID()}
-              className="w-[120px] border-[0.5px] hover:border-2 border-slate-100 shadow-md m-1 relative overflow-hidden rounded text-center"
+              className="w-[120px] inline-block border-[0.5px] hover:border-2 border-slate-100 shadow-md m-1 relative overflow-hidden rounded text-center"
               bg={data?.bg}
               cl={data?.cl}
             />
           );
         })}
-      </div>
+      </marquee>
+      <marquee
+        direction="right"
+        className="w-full bg-slate-500 p-2 shadow-md overflow-y-scroll"
+      >
+        {code?.map((data) => {
+          return (
+            <Color
+              key={crypto.randomUUID()}
+              className="w-[120px] inline-block border-[0.5px] hover:border-2 border-slate-100 shadow-md m-1 relative overflow-hidden rounded text-center"
+              bg={data?.bg}
+              cl={data?.cl}
+            />
+          );
+        })}
+      </marquee>
     </div>
   );
 }
