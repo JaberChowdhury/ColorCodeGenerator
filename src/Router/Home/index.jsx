@@ -1,8 +1,20 @@
 import { Navbar, HomeLink, Svg, HomeSlider } from "../../Components";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="w-full min-h-screen flex justify-center items-center flex-col relative bg-slate-300">
+    <motion.div
+      initial={{
+        opacity: 0,
+      }}
+      animate={{
+        opacity: 1,
+      }}
+      transition={{
+        duration: 0.75,
+      }}
+      className="w-full min-h-screen flex justify-center items-center flex-col relative bg-slate-300"
+    >
       <Navbar />
       <div className="w-full  p-2 flex justify-center mt-36 items-center relative flex-wrap">
         <HomeLink title="Colors" path="/Colors">
@@ -26,6 +38,6 @@ export default function Home() {
 
       <HomeSlider value="Hexadecimal" />
       <HomeSlider value="Rgb" />
-    </div>
+    </motion.div>
   );
 }

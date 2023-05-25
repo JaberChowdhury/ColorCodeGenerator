@@ -1,4 +1,5 @@
 import { Navbar, Color } from "../../Components";
+import { AppRegistration } from "@mui/icons-material";
 
 export default function Colors({ data, generateColors }) {
   const generateMore = () => {
@@ -11,7 +12,7 @@ export default function Colors({ data, generateColors }) {
         onClick={generateMore}
         className="w-[200px] my-10 p-2 shadow-md text-center font-bold rounded bg-teal-600 text-slate-100"
       >
-        Generate More
+        Generate More <AppRegistration />
       </button>
       <div className="w-full h-full flex bg-slate-400 justify-center items-center flex-wrap relative p-2 m-2 mt-10">
         {data?.map((value) => (

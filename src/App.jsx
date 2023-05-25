@@ -14,7 +14,7 @@ export default function App() {
   const [colorCodes, setColorCodes] = useState([]);
 
   const generateColors = () => {
-    let final = MultipleColor(200, "Hexadecimal");
+    let final = MultipleColor(100, "Hexadecimal");
     setColorCodes(final);
   };
 

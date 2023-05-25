@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { ColorPathEncode } from "../../Hooks";
+import { CodeOff } from "@mui/icons-material";
+import { motion as m } from "framer-motion";
 
 export default function Color({
   bg,
@@ -19,7 +21,16 @@ export default function Color({
         background: `-webkit-linear-gradient(45deg,${bg}66,${cl}66)`,
       }}
     >
-      <p
+      <m.p
+        initial={{
+          scaleX: 0,
+        }}
+        animate={{
+          scaleX: 1,
+        }}
+        transition={{
+          delay: 1,
+        }}
         className={bg.length > 8 ? pTagSmall : pTag}
         style={{
           backgroundColor: bg,
@@ -27,7 +38,8 @@ export default function Color({
         }}
       >
         {bg}
-      </p>
+        <CodeOff />
+      </m.p>
 
       <p
         className={bg.length > 8 ? pTagSmall : pTag}
@@ -37,6 +49,7 @@ export default function Color({
         }}
       >
         {cl}
+        <CodeOff />
       </p>
     </Link>
   );
